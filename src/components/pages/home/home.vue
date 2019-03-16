@@ -23,22 +23,39 @@
     import Foot from '@/components/common/foot'
     import Head from '@/components/common/head'
 
+    let all_this; // 定义一个全局指针，负责全局prototype
+
     export default {
       name: "home",
-      data(){
+      data() {
         return {
           msg: "home模块"
         }
       },
-      methods: {
-
-      },
+      methods: {},
       components: { // 注册公共组件
         com_foot: Foot,
         com_head: Head,
       },
+      beforeCreate: function () {
+        all_this = this;
 
+        console.log(this.$appName("22222=="));
+        run();
+      },
+      created() {
+        all_this = this;
+
+        console.log(this.$appName("33333=="));
+      }
     }
+
+    function run() {
+      console.log(all_this.$appName("22222----"))
+    }
+
+
+
 </script>
 
 <style scoped>

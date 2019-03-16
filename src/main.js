@@ -6,6 +6,12 @@ import router from './router'
 
 Vue.config.productionTip = false;
 
+Vue.prototype.$appName = function (name) {
+  return name;
+};
+
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -13,4 +19,6 @@ new Vue({
   components: { App },
   template: '<App/>'
 });
+
+
 
