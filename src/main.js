@@ -6,7 +6,7 @@ import router from './router'
 
 Vue.config.productionTip = false;
 
-Vue.prototype.$appName = function (name) {
+Vue.prototype.$appName = function (name) { // 注意，用了Vue对象，引用等指针也应该是Vue
   return name;
 };
 
