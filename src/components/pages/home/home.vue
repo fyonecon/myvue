@@ -46,7 +46,7 @@
       created() {
         all_this = this;
 
-        console.log(this.$appName("33333=="));
+        console.log(all_this.$appName("33333=="));
       }
     }
 
